@@ -25,7 +25,7 @@ function App() {
   const answers = [...incorrect_answers, correct_answer];
   return (
     <main>
-      {/*<Modal />*/}
+      <Modal />
       <section className="quiz">
         <p className="correct-answers">
           Correct answers: {correct}/{index}
@@ -37,7 +37,7 @@ function App() {
               return (
                 <button
                   onClick={() => {
-                    checkAnswer(ans === correct_answer);
+                    checkAnswer(ans === correct_answer ? true : false);
                   }}
                   key={index}
                   className="answer-btn"
